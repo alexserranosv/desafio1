@@ -1,0 +1,18 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.noItems {
+  text-align: center;
+  font-size: 1.1em;
+  color: #bb86fc;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,49 @@
+.container {
+  width: 97%;
+}
+
+.textarea {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  resize: none;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.error {
+  color: #ff6b6b;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .textarea {
+    height: calc(50vh - 80px);
+    font-size: 12px;
+  }
+
+  .container {
+    width: 92%;
+  }
+}
+
+@media (max-width: 590px) {
+  .textarea {
+    height: calc(50vh - 80px);
+    font-size: 12px;
+  }
+
+  .container {
+    width: 90%;
+  }
+}

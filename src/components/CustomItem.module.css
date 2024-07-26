@@ -1,0 +1,193 @@
+.item {
+  border: none;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 30px;
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #61dafb;
+  border-bottom: 2px solid #61dafb;
+  padding-bottom: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.textContent {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.textContent h3 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  color: #bb86fc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.textContent p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.imageContainer {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imageContainer:hover .image {
+  transform: scale(1.05);
+}
+
+.placeholderImage {
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.placeholderCircle {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: #444;
+  position: absolute;
+  top: 15%;
+  right: 15%;
+}
+
+.placeholderTriangle {
+  width: 0;
+  height: 0;
+  border-left: 35% solid transparent;
+  border-right: 35% solid transparent;
+  border-bottom: 70% solid #333;
+}
+
+/* Estilos para desktop */
+@media (min-width: 1025px) {
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .content {
+    flex: 1;
+    margin-right: 30px;
+  }
+
+  .imageContainer {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Estilos para iPad y tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .item {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.6em;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .textContent {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+  }
+
+  .image, .placeholderImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .textContent h3 {
+    font-size: 1.2em;
+  }
+}
+
+/* Estilos para móviles */
+@media (max-width: 767px) {
+  .item {
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+
+  .content {
+    flex-direction: column-reverse;
+  }
+
+  .textContent {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* Aspect ratio 4:3 */
+  }
+
+  .image, .placeholderImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .textContent h3 {
+    font-size: 1.1em;
+  }
+}
