@@ -1,10 +1,12 @@
 .container {
-  width: 97%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
 }
 
 .textarea {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px); /* Ajustado para dejar espacio para el mensaje de error */
   background-color: var(--input-bg);
   color: var(--text-color);
   border: 1px solid var(--border-color);
@@ -22,28 +24,29 @@
 
 .error {
   color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.1);
+  border: 1px solid #ff6b6b;
+  border-radius: 4px;
+  padding: 10px;
   margin-top: 10px;
   font-size: 14px;
 }
 
 @media (max-width: 1024px) {
-  .textarea {
-    height: calc(50vh - 80px);
-    font-size: 12px;
-  }
-
-  .container {
-    width: 92%;
+  .container{
+    width: 90%;
   }
 }
 
-@media (max-width: 590px) {
-  .textarea {
-    height: calc(50vh - 80px);
-    font-size: 12px;
+@media (max-width: 594px) {
+  .container{
+    width: 86%;
   }
+}
 
-  .container {
-    width: 90%;
+@media (max-width: 768px) {
+  .textarea {
+    height: calc(50vh - 60px);
+    font-size: 12px;
   }
 }

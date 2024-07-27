@@ -9,7 +9,6 @@ export default function Home() {
   const [items, setItems] = useState([]);
 
   const handleJsonChange = (newJson) => {
-    console.log("New JSON:", newJson); // Para depuración
     setItems(newJson || []);
   };
 

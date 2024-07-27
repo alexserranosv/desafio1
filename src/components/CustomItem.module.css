@@ -116,7 +116,7 @@
 }
 
 /* Estilos para iPad y tablets */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1323px) {
   .item {
     padding: 20px;
   }
