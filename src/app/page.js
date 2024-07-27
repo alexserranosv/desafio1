@@ -6,7 +6,7 @@ import CustomItemContainer from "../components/CustomItemContainer";
 import styles from "./page.module.css";
 
 export default function Home() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState({});
 
   const handleJsonChange = (newJson) => {
     setItems(newJson || []);
@@ -18,7 +18,7 @@ export default function Home() {
         <JsonInput onJsonChange={handleJsonChange} />
       </div>
       <div className={styles.displaySection}>
-        <CustomItemContainer items={items} />
+        <CustomItemContainer items={items.crisis_economicas} />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 
 import styles from "./CustomItem.module.css";
 
-const CustomItem = ({ title, description, characteristics, imageUrl }) => {
+const CustomItem = ({ title, description, fecha, impacto, imageUrl }) => {
   return (
     <div className={styles.item}>
       <div className={styles.content}>
@@ -10,8 +10,10 @@ const CustomItem = ({ title, description, characteristics, imageUrl }) => {
           <h2 className={styles.title}>{title || "Sin título"}</h2>
           <h3>DESCRIPCIÓN</h3>
           <p>{description || "Sin descripción"}</p>
-          <h3>CARACTERÍSTICAS</h3>
-          <p>{characteristics || "Sin características"}</p>
+          <h3>Impacto</h3>
+          <p>{fecha || "Sin características"}</p>
+          <p>{impacto}</p>
+          <p></p>
         </div>
         <div className={styles.imageContainer}>
           {imageUrl ? (

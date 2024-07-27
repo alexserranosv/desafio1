@@ -17,10 +17,11 @@ const CustomItemContainer = ({ items }) => {
       {items.map((item, index) => (
         <CustomItem
           key={index}
-          title={item.title || "Sin título"}
-          description={item.description || "Sin descripción"}
-          characteristics={item.characteristics || "Sin características"}
-          imageUrl={item.imageUrl}
+          title={item.titulo || "Sin título"}
+          description={item.descripcion || "Sin descripción"}
+          fecha={item.caracteristicas.fecha || "Sin descripción"}
+          impacto={item.caracteristicas.impacto || "Sin descripción"}
+          imageUrl={item.imagen_de_referencia}
         />
       ))}
     </div>
